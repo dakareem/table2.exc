@@ -1,3 +1,4 @@
+// let persons []
 const titles = {
     id: "id",
     FirstName: "First Name",
@@ -60,33 +61,41 @@ const titles = {
           tr.appendChild(td)
       }
       return tr
-  }
+        }
+
+  function findPerson(id){
+    for(let person of persons){
+        if (person.id === id){ 
+      return person
+         }
+        }
+      }
 
 
-  function createTable(listOfObjects){
+      function edit(id){
+          const personToEdit = findPerson(id)
+          loadPersonDetails(personToEdit)
+       }
+
+
+  function createTable(persons){
     const table = document.createElement('table')
-    for (let obj of listOfObjects) {
+    for (let obj of persons) {
         const tr = createdTr(obj)
-
         const tdEdit = createTd("<button onclick=edit('" + obj.id + "')>Edit Person</button>")
-
         tr.appendChild(tdEdit)
         table.appendChild(tr)
-    }
+                   }
     return table
-}
+                  }
 
 
-
-//   function createTable(listOfObjects){
-//       const table = document.createElement('table')
-//       for (let obj of listOfObjects) {
-//           const tr = createdTr(obj)
-//           table.appendChild(tr)
-//       }
-//       return table
-//   }
-
+    function loadPersonDetails(personToEdit){
+       const form = document.querySelector('form')
+        for (let prop of properties){
+       form.elements[prop].value = personToEdit[prop]
+            }
+         }
 
   function renderTable(){
       const table = createTable(persons)
