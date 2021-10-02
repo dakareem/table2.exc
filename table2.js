@@ -5,8 +5,8 @@ const titles = {
     ProfilUrl: "Profil Url",
     gender: "gender",
     hobby: "hobby",
-    edit : "Edit",
-    delete : "Delete",
+    // edit : "Edit",
+    // delete : "Delete",
 
   }
   
