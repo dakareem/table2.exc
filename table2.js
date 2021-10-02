@@ -62,14 +62,31 @@ const titles = {
       return tr
   }
 
+
   function createTable(listOfObjects){
-      const table = document.createElement('table')
-      for (let obj of listOfObjects) {
-          const tr = createdTr(obj)
-          table.appendChild(tr)
-      }
-      return table
-  }
+    const table = document.createElement('table')
+    for (let obj of listOfObjects) {
+        const tr = createdTr(obj)
+
+        const tdEdit = createTd("<button onclick=edit('" + obj.id + "')>Edit Person</button>")
+
+        tr.appendChild(tdEdit)
+        table.appendChild(tr)
+    }
+    return table
+}
+
+
+
+//   function createTable(listOfObjects){
+//       const table = document.createElement('table')
+//       for (let obj of listOfObjects) {
+//           const tr = createdTr(obj)
+//           table.appendChild(tr)
+//       }
+//       return table
+//   }
+
 
   function renderTable(){
       const table = createTable(persons)
