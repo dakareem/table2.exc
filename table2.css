@@ -1,0 +1,35 @@
+* { 
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size:105%;
+
+}
+
+
+input{
+margin-top :5px;
+}
+
+table{border : 1px solid black; margin-top : 20px;}
+
+tr {border : 1px solid black;}
+
+td { padding : 3px 5px; border-top: 1px solid black; border-right: 1px solid black;}
+
+img { height:30px;}
+
+  .thegender{
+    margin-top:200px;
+      padding: 5px;
+      margin:5px;
+  }
+
+  span { 
+      line-height:200%;
+      text-align:right;
+
+  }
+
+  ::placeholder {
+    font-size: 15px;
+    text-align: center;
+  }
