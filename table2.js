@@ -33,7 +33,7 @@ const titles = {
   }
 
 
-  function createdTd(text) {
+  function createTd(text) {
       const td = document.createElement('td')
       td.innerHTML = text
       return td
@@ -51,11 +51,11 @@ const titles = {
           let td
           if(prop === 'profile') {
               const img = createImage(obj[prop])
-           td = createdTd('')
+           td = createTd('')
            td.appendChild(img)
           }
           else {
-          td = createdTd(obj[prop])
+          td = createTd(obj[prop])
        }
           tr.appendChild(td)
       }
