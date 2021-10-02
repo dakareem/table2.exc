@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel= "stylesheet" href="table2.css">
+</head>
+<body>
+<form>
+    <input type="text" name="id" placeholder="my id is"><br>
+
+    <input type="text" name="first_name" placeholder="my first name is"><br>
+
+    <input type="text" name="last_name" placeholder="my last name is"><br>
+
+    <input type="url" name="profile" placeholder="my profile url is"><br>
+
+    <span class="thegender">
+    <span>Male</span><input type="radio" name="gender" value="male">
+    <span>female</span><input type="radio" name="gender" value="female">
+    </span><br>
+
+    <span>my Hobby is :</span>
+    <select name="hobby">
+        <option value="Netflix">Netflix</option>
+        <option value="sleeping">sleeping</option>
+        <option value="computer games">computer games</option>
+        <option value="reading">reading</option>
+    </select><br>
+
+   <button onclick="add()">Add Me</button>
+</form>
+   <div class="list"></div> 
+</body>
+<script src="table2.js"></script>
+</html>
